@@ -29,4 +29,6 @@
 
 \.idea/
 
+!CoinCoin-miner.exe
+
 cmake-build-debug/
