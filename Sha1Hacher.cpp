@@ -2,7 +2,7 @@
 // Created by nicbe on 11/12/2017.
 //
 
-#include <c++/4.8.3/stdexcept>
+#include <stdexcept>
 #include "Sha1Hacher.h"
 
 Sha1Hacher Sha1Hacher::m_instance=Sha1Hacher();

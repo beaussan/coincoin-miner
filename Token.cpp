@@ -13,8 +13,6 @@ Token::Token(std::string tokenString) {
 int Token::getValue() {
     std::string hash = getHash();
     unsigned int i;
-
-    std::cout << "Using hach : " << hash << std::endl;
     for (i = 0; i < hash.length(); ++i) {
         if (hash.at(i) != 'c') {
             break;

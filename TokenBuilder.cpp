@@ -42,11 +42,11 @@ std::string random_string( size_t length )
     return str;
 }
 
-std::vector<Token> TokenBuilder::buildMultiple(int number) {
+std::vector<TokenSimpleHash> TokenBuilder::buildMultiple(int number) {
     if (number <= 0) {
         throw std::invalid_argument( "Arg is not a string ! Could not hash" );
     }
-    std::vector<Token> tokens;
+    std::vector<TokenSimpleHash> tokens;
     for (int i = 0; i < number; ++i) {
         TokenSimpleHash tok(
                 random_string(32) +

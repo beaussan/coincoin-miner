@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include "Token.h"
+#include "TokenSimpleHash.h"
 
 class TokenBuilder {
 
@@ -21,7 +21,7 @@ public:
     TokenBuilder timestamp(int timestamp);
     TokenBuilder useSimpleSha();
     TokenBuilder version1();
-    std::vector<Token> buildMultiple(int number);
+    std::vector<TokenSimpleHash> buildMultiple(int number);
 
 private:
     std::string m_triOwn;

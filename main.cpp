@@ -6,8 +6,8 @@
 
 void mine(std::string trigram, int limitValue) {
     TokenBuilder builder;
-    builder.triOwn(trigram).useSimpleSha().version1();
-    std::vector<Token> tokens;
+    builder = builder.triOwn(trigram).useSimpleSha().version1();
+    std::vector<TokenSimpleHash> tokens;
 
     while (true) {
         tokens = builder.timestamp(std::time(0)).buildMultiple(20);
@@ -20,7 +20,6 @@ void mine(std::string trigram, int limitValue) {
 }
 
 int main(int argc, const char **argv) {
-    std::cout << "Hello ? " << std::endl;
 
     args::ArgumentParser parser("This is the CoinCoin-miner program.", "");
     args::HelpFlag help(parser, "help", "Display this help menu", {'h', "help"});
@@ -44,10 +43,8 @@ int main(int argc, const char **argv) {
     }
 
     if (trigram && minc) {
-        std::cout << "Start mining ! " << std::endl;
         mine(args::get(trigram), args::get(minc));
     } else {
-        std::cout << "Error : ? " << std::endl;
         std::cout << parser;
         return 0;
     }
